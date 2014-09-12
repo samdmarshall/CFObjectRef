@@ -6,77 +6,166 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		229E47D819C3884800367E0D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E47D719C3884800367E0D /* CoreFoundation.framework */; };
+		229E47DB19C3884800367E0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 229E47DA19C3884800367E0D /* main.c */; };
+		229E47DD19C3884800367E0D /* TestingCFObjects.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229E47DC19C3884800367E0D /* TestingCFObjects.1 */; };
+		229E47E519C3886200367E0D /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = 229E47E319C3886200367E0D /* test.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		229E47D219C3884800367E0D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				229E47DD19C3884800367E0D /* TestingCFObjects.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		22A58EAE19119C4100303D31 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		22A58EB319119C6100303D31 /* CFRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRuntime.h; sourceTree = "<group>"; };
-		22A58EB519119C7700303D31 /* CFObjectRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFObjectRef.h; sourceTree = "<group>"; };
-		22A58EBB1911BBE800303D31 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		22A58EBC1911BBEE00303D31 /* test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
+		229E47D419C3884800367E0D /* TestingCFObjects */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestingCFObjects; sourceTree = BUILT_PRODUCTS_DIR; };
+		229E47D719C3884800367E0D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		229E47DA19C3884800367E0D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		229E47DC19C3884800367E0D /* TestingCFObjects.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TestingCFObjects.1; sourceTree = "<group>"; };
+		229E47E119C3885400367E0D /* CFObjectRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFObjectRef.h; sourceTree = "<group>"; };
+		229E47E219C3885400367E0D /* CFRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFRuntime.h; sourceTree = "<group>"; };
+		229E47E319C3886200367E0D /* test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = SOURCE_ROOT; };
+		229E47E419C3886200367E0D /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		229E47D119C3884800367E0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229E47D819C3884800367E0D /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		22A58E9E19119C3600303D31 = {
+		229E47C919C3882500367E0D = {
 			isa = PBXGroup;
 			children = (
-				22A58EBB1911BBE800303D31 /* test.h */,
-				22A58EBC1911BBEE00303D31 /* test.c */,
-				22A58EB219119C5600303D31 /* src */,
-				22A58EB119119C4E00303D31 /* Link */,
+				229E47E819C3926000367E0D /* CFObjectRef */,
+				229E47D919C3884800367E0D /* TestingCFObjects */,
+				229E47D619C3884800367E0D /* Frameworks */,
+				229E47D519C3884800367E0D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		22A58EB019119C4600303D31 /* Frameworks */ = {
+		229E47D519C3884800367E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22A58EAE19119C4100303D31 /* CoreFoundation.framework */,
+				229E47D419C3884800367E0D /* TestingCFObjects */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		229E47D619C3884800367E0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				229E47D719C3884800367E0D /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		22A58EB119119C4E00303D31 /* Link */ = {
+		229E47D919C3884800367E0D /* TestingCFObjects */ = {
 			isa = PBXGroup;
 			children = (
-				22A58EB019119C4600303D31 /* Frameworks */,
+				229E47E419C3886200367E0D /* test.h */,
+				229E47E319C3886200367E0D /* test.c */,
+				229E47DA19C3884800367E0D /* main.c */,
+				229E47DC19C3884800367E0D /* TestingCFObjects.1 */,
 			);
-			name = Link;
+			path = TestingCFObjects;
 			sourceTree = "<group>";
 		};
-		22A58EB219119C5600303D31 /* src */ = {
+		229E47E819C3926000367E0D /* CFObjectRef */ = {
 			isa = PBXGroup;
 			children = (
-				22A58EB319119C6100303D31 /* CFRuntime.h */,
-				22A58EB519119C7700303D31 /* CFObjectRef.h */,
+				229E47E219C3885400367E0D /* CFRuntime.h */,
+				229E47E119C3885400367E0D /* CFObjectRef.h */,
 			);
-			name = src;
+			name = CFObjectRef;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXNativeTarget section */
+		229E47D319C3884800367E0D /* TestingCFObjects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 229E47E019C3884800367E0D /* Build configuration list for PBXNativeTarget "TestingCFObjects" */;
+			buildPhases = (
+				229E47D019C3884800367E0D /* Sources */,
+				229E47D119C3884800367E0D /* Frameworks */,
+				229E47D219C3884800367E0D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestingCFObjects;
+			productName = TestingCFObjects;
+			productReference = 229E47D419C3884800367E0D /* TestingCFObjects */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
-		22A58E9F19119C3600303D31 /* Project object */ = {
+		229E47CA19C3882500367E0D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Sam Marshall";
 			};
-			buildConfigurationList = 22A58EA219119C3600303D31 /* Build configuration list for PBXProject "CFObjectClass" */;
+			buildConfigurationList = 229E47CD19C3882500367E0D /* Build configuration list for PBXProject "CFObjectClass" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 22A58E9E19119C3600303D31;
-			productRefGroup = 22A58E9E19119C3600303D31;
+			mainGroup = 229E47C919C3882500367E0D;
+			productRefGroup = 229E47D519C3884800367E0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				229E47D319C3884800367E0D /* TestingCFObjects */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		229E47D019C3884800367E0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229E47DB19C3884800367E0D /* main.c in Sources */,
+				229E47E519C3886200367E0D /* test.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
 /* Begin XCBuildConfiguration section */
-		22A58EA919119C3600303D31 /* Debug */ = {
+		229E47CE19C3882500367E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		229E47CF19C3882500367E0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		229E47DE19C3884800367E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -110,11 +199,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		22A58EAA19119C3600303D31 /* Release */ = {
+		229E47DF19C3884800367E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -142,6 +232,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -149,16 +240,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22A58EA219119C3600303D31 /* Build configuration list for PBXProject "CFObjectClass" */ = {
+		229E47CD19C3882500367E0D /* Build configuration list for PBXProject "CFObjectClass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				22A58EA919119C3600303D31 /* Debug */,
-				22A58EAA19119C3600303D31 /* Release */,
+				229E47CE19C3882500367E0D /* Debug */,
+				229E47CF19C3882500367E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		229E47E019C3884800367E0D /* Build configuration list for PBXNativeTarget "TestingCFObjects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				229E47DE19C3884800367E0D /* Debug */,
+				229E47DF19C3884800367E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 22A58E9F19119C3600303D31 /* Project object */;
+	rootObject = 229E47CA19C3882500367E0D /* Project object */;
 }

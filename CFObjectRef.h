@@ -15,58 +15,147 @@
 #pragma mark -
 #pragma mark Interface
 
+// Creating the object "ref" name
 #define __CFRef(name) name##Ref
 
+
+#define ComposeName(prefix, name, affix) prefix##name##affix
+
+
 #define CreateCFObjectWithNameAndProperties(name, ivar_struct) \
-struct __##name##Ivars ivar_struct; \
-struct __##name { \
+struct ComposeName(__,name,Ivars) ivar_struct; \
+struct ComposeName(__,name,) { \
 	CFRuntimeBase _base; \
-	struct __##name##Ivars ivars; \
+	struct ComposeName(__,name,Ivars) ivars; \
 }; \
-typedef const struct __##name * __CFRef(name); \
+typedef const struct ComposeName(__,name,) * __CFRef(name); \
 CFTypeID name##GetTypeID(void);
 
-#define CreateForClass(class_name, args) __CFRef(class_name) class_name##Create args ;
 
-#define CreateGetSetForIvar(class_name, type, ivar) \
-type class_name##Get##ivar(__CFRef(class_name) ref); \
-void class_name##Set##ivar(__CFRef(class_name) ref, type value);
+#define CFObjectCreateForClass(class_name, args) __CFRef(class_name) class_name##Create args ;
+
+
+#define CFObjectCreateGetterNameForIvar(class_name, ivar) class_name##Get##ivar
+
+
+#define CFObjectCreateSetterNameForIvar(class_name, ivar) class_name##Set##ivar
+
+/*!
+ @function CreateGetSetForIvar
+ @param class_name The name of the class
+ @param type The type of the ivar
+ @param ivar The ivar name
+ */
+#define CFObjectCreateGetSetForIvar(class_name, type, ivar) \
+type CFObjectCreateGetterNameForIvar(class_name, ivar)(__CFRef(class_name) ref); \
+void CFObjectCreateSetterNameForIvar(class_name, ivar)(__CFRef(class_name) ref, type value);
+
 
 #pragma mark -
 #pragma mark Implementation
 
-#define __CFObjectBaseDeclaration(class_name, call_type, return_type, args, imp) static return_type __##class_name##call_type args imp
 
-#define CFObjectInit(class_name, init_imp) __CFObjectBaseDeclaration(class_name, Init, CFTypeRef, (CFTypeRef cf1, CFTypeRef cf2), init_imp)
-#define CFObjectCopy(class_name, copy_imp) __CFObjectBaseDeclaration(class_name, Copy, CFTypeRef, (CFTypeRef cf), copy_imp)
-#define CFObjectRelease(class_name, finalize_imp) __CFObjectBaseDeclaration(class_name, Finalize, void, (CFTypeRef cf), finalize_imp)
-#define CFObjectEqual(class_name, equal_imp) __CFObjectBaseDeclaration(class_name, Equal, Boolean, (CFTypeRef cf1, CFTypeRef cf2), equal_imp)
-#define CFObjectHash(class_name, hash_imp) __CFObjectBaseDeclaration(class_name, Hash, CFHashCode, (CFTypeRef cf), hash_imp)
-#define CFObjectCopyDescription(class_name, desc_imp) __CFObjectBaseDeclaration(class_name, CopyFormattingDesc, CFStringRef, (CFTypeRef cf, CFDictionaryRef formatOpts), desc_imp)
-#define CFObjectCopyDebugDescription(class_name, ddesc_imp) __CFObjectBaseDeclaration(class_name, CopyDebugDesc, CFStringRef, (CFTypeRef cf), ddesc_imp)
+#define __CFObjectBaseDeclaration(class_name, call_type, return_type, args) static return_type ComposeName(__,class_name,call_type) args
+
+/*!
+ @function CFObjectInit
+ Performs additional initialization of a CF object
+ @param cf A CF object
+ @result A fully initialized CF object
+ */
+#define CFObjectInit(class_name) __CFObjectBaseDeclaration(class_name, Init, void, (CFTypeRef cf))
+
+/*!
+ @function CFObjectCopy
+ @param cf A CF object to copy
+ @result A copy of the passed CF object
+ */
+#define CFObjectCopy(class_name) __CFObjectBaseDeclaration(class_name, Copy, CFTypeRef, (CFAllocatorRef allocator, CFTypeRef cf))
+
+/*!
+ @function CFObjectRelease
+ Frees memory used by a CF object
+ @param cf A CF object
+ */
+#define CFObjectRelease(class_name) __CFObjectBaseDeclaration(class_name, Finalize, void, (CFTypeRef cf))
+
+/*!
+ @function CFObjectEqual
+ Tests if two CF objects are equal
+ @param cf1 A CF object
+ @param cf2 A CF object
+ @result Boolean value of if the two objects are equal
+ */
+#define CFObjectEqual(class_name) __CFObjectBaseDeclaration(class_name, Equal, Boolean, (CFTypeRef cf1, CFTypeRef cf2))
+
+/*!
+ @function CFObjectHash
+ Gets the hash value associated with a CF object
+ @param cf A CF Object
+ @result Hash value
+ */
+#define CFObjectHash(class_name) __CFObjectBaseDeclaration(class_name, Hash, CFHashCode, (CFTypeRef cf))
+
+/*!
+ @function CFObjectCopyDescription
+ Prints the description of an object
+ @param cf A CF object
+ */
+#define CFObjectCopyDescription(class_name) __CFObjectBaseDeclaration(class_name, CopyFormattingDesc, CFStringRef, (CFTypeRef cf, CFDictionaryRef formatOpts))
+
+/*!
+ @function CFObjectCopyDebugDescription
+ Prints the debug description of an object
+ @param cf A CF object
+ */
+#define CFObjectCopyDebugDescription(class_name) __CFObjectBaseDeclaration(class_name, CopyDebugDesc, CFStringRef, (CFTypeRef cf))
+
+
+#define CFObjectClassID(class_name) ComposeName(_k,class_name,ID)
+
+
+#define CFObjectClassInitializationFunc(class_name) ComposeName(__,class_name,ClassInitialize)
+
+
+#define CFObjectClassRuntimeDefinition(class_name) ComposeName(_k,class_name,Class)
+
+
+#define CFObjectCreate(class_name) \
+if (CFObjectClassID(class_name) == _kCFRuntimeNotATypeID) { \
+	CFObjectClassInitializationFunc(class_name)();\
+} \
+struct ComposeName(__,class_name,) *obj = NULL; \
+uint32_t extra = sizeof(struct ComposeName(__,class_name,)) - sizeof(CFRuntimeBase); \
+obj = (struct ComposeName(__,class_name,) *)_CFRuntimeCreateInstance(allocator, CFObjectClassID(class_name), extra, NULL);
+
 
 #define CFObjectInitializeClass(class_name) \
-static CFTypeID _k##class_name##ID = _kCFRuntimeNotATypeID; \
-static CFRuntimeClass _k##class_name##Class = {0}; \
-void __##class_name##ClassInitialize(void) { \
-	_k##class_name##Class.version = 0; \
-	_k##class_name##Class.className = "##class_name##"; \
-	_k##class_name##Class.init = NULL; \
-	_k##class_name##Class.copy = NULL; \
-	_k##class_name##Class.finalize = __##class_name##Finalize; \
-	_k##class_name##Class.equal = __##class_name##Equal; \
-	_k##class_name##Class.hash = __##class_name##Hash; \
-	_k##class_name##Class.copyFormattingDesc = __##class_name##CopyFormattingDesc; \
-	_k##class_name##Class.copyDebugDesc = __##class_name##CopyDebugDesc; \
-	_k##class_name##ID = _CFRuntimeRegisterClass((const CFRuntimeClass * const)&_k##class_name##Class); \
+static CFTypeID CFObjectClassID(class_name) = _kCFRuntimeNotATypeID; \
+static CFRuntimeClass CFObjectClassRuntimeDefinition(class_name) = {0}; \
+void CFObjectClassInitializationFunc(class_name)(void) { \
+	CFObjectClassRuntimeDefinition(class_name).version = 0; \
+	CFObjectClassRuntimeDefinition(class_name).className = "##class_name##"; \
+	CFObjectClassRuntimeDefinition(class_name).init = ComposeName(__,class_name,Init); \
+	CFObjectClassRuntimeDefinition(class_name).copy = ComposeName(__,class_name,Copy); \
+	CFObjectClassRuntimeDefinition(class_name).finalize = ComposeName(__,class_name,Finalize); \
+	CFObjectClassRuntimeDefinition(class_name).equal = ComposeName(__,class_name,Equal); \
+	CFObjectClassRuntimeDefinition(class_name).hash = ComposeName(__,class_name,Hash); \
+	CFObjectClassRuntimeDefinition(class_name).copyFormattingDesc = ComposeName(__,class_name,CopyFormattingDesc); \
+	CFObjectClassRuntimeDefinition(class_name).copyDebugDesc = ComposeName(__,class_name,CopyDebugDesc); \
+	CFObjectClassID(class_name) = _CFRuntimeRegisterClass((const CFRuntimeClass * const)&CFObjectClassRuntimeDefinition(class_name)); \
 } \
-CFTypeID class_name##GetTypeID(void) { \
-    return _k##class_name##ID; \
+CFTypeID ComposeName(,class_name,GetTypeID)(void) { \
+    return CFObjectClassID(class_name); \
 }
 
-#define CreateImpForCreate(class_name, args, create_imp) __CFRef(class_name) class_name##Create args create_imp
 
-#define CreateImpForGetIvar(class_name, type, ivar, get_imp) type class_name##Get##ivar(__CFRef(class_name) ref) get_imp
-#define CreateImpForSetIvar(class_name, type, ivar, set_imp) void class_name##Set##ivar(__CFRef(class_name) ref, type value) set_imp
+#define CFObjectCreateImpForCreate(class_name, args) __CFRef(class_name) ComposeName(,class_name,Create) args
+
+
+#define CFObjectCreateImpForGetIvar(class_name, type, ivar) type CFObjectCreateGetterNameForIvar(class_name, ivar)(__CFRef(class_name) cf)
+
+
+#define CFObjectCreateImpForSetIvar(class_name, type, ivar) void CFObjectCreateSetterNameForIvar(class_name, ivar)(__CFRef(class_name) cf, type value)
+
 
 #endif

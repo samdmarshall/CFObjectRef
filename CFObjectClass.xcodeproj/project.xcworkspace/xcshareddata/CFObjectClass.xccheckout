@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>913A9200-65C4-4953-93AF-D2D591189B8C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CFObjectClass</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>88FEE9DF-B304-44C7-8522-4517FE8F94BC</key>
+		<string>ssh://github.com/samdmarshall/CFObjectRef.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CFObjectClass/CFObjectClass.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>88FEE9DF-B304-44C7-8522-4517FE8F94BC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/samdmarshall/CFObjectRef.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>88FEE9DF-B304-44C7-8522-4517FE8F94BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>88FEE9DF-B304-44C7-8522-4517FE8F94BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CFObjectClass</string>
+		</dict>
+	</array>
+</dict>
+</plist>

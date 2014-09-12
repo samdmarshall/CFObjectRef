@@ -3,10 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>TestingCFObjects.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>22A58EA619119C3600303D31</key>
+		<key>229E47D319C3884800367E0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -23,9 +23,9 @@ CreateCFObjectWithNameAndProperties(EXRange, {
     uint32_t _length;
 })
 
-CreateForClass(EXRange, (CFAllocatorRef allocator, uint32_t location, uint32_t length))
+CFObjectCreateForClass(EXRange, (CFAllocatorRef allocator, uint32_t location, uint32_t length))
 
-CreateGetSetForIvar(EXRange, uint32_t, Location)
-CreateGetSetForIvar(EXRange, uint32_t, Length)
+CFObjectCreateGetSetForIvar(EXRange, uint32_t, Location)
+CFObjectCreateGetSetForIvar(EXRange, uint32_t, Length)
 
 #endif
