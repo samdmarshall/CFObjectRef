@@ -28,7 +28,7 @@ struct ComposeName(__,name,) { \
 	struct ComposeName(__,name,Ivars) ivars; \
 }; \
 typedef const struct ComposeName(__,name,) * __CFRef(name); \
-CFTypeID name##GetTypeID(void);
+CFTypeID ComposeName(,name,GetTypeID)(void);
 
 
 #define CFObjectCreateForClass(class_name, args) __CFRef(class_name) ComposeName(,class_name,Create) args ;
