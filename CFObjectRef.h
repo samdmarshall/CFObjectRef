@@ -15,11 +15,10 @@
 #pragma mark -
 #pragma mark Interface
 
-// Creating the object "ref" name
-#define __CFRef(name) name##Ref
-
-
 #define ComposeName(prefix, name, affix) prefix##name##affix
+
+// Creating the object "ref" name
+#define __CFRef(name) ComposeName(,name,Ref)
 
 
 #define CreateCFObjectWithNameAndProperties(name, ivar_struct) \
@@ -32,13 +31,13 @@ typedef const struct ComposeName(__,name,) * __CFRef(name); \
 CFTypeID name##GetTypeID(void);
 
 
-#define CFObjectCreateForClass(class_name, args) __CFRef(class_name) class_name##Create args ;
+#define CFObjectCreateForClass(class_name, args) __CFRef(class_name) ComposeName(,class_name,Create) args ;
 
 
-#define CFObjectCreateGetterNameForIvar(class_name, ivar) class_name##Get##ivar
+#define CFObjectCreateGetterNameForIvar(class_name, ivar) ComposeName(class_name,Get,ivar)
 
 
-#define CFObjectCreateSetterNameForIvar(class_name, ivar) class_name##Set##ivar
+#define CFObjectCreateSetterNameForIvar(class_name, ivar) ComposeName(class_name,Set,ivar)
 
 /*!
  @function CreateGetSetForIvar
