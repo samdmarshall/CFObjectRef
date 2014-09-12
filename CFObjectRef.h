@@ -124,7 +124,7 @@ if (CFObjectClassID(class_name) == _kCFRuntimeNotATypeID) { \
 	CFObjectClassInitializationFunc(class_name)();\
 } \
 struct ComposeName(__,class_name,) *obj = NULL; \
-uint32_t extra = sizeof(struct ComposeName(__,class_name,)) - sizeof(CFRuntimeBase); \
+CFIndex extra = sizeof(struct ComposeName(__,class_name,)) - sizeof(CFRuntimeBase); \
 obj = (struct ComposeName(__,class_name,) *)_CFRuntimeCreateInstance(allocator, CFObjectClassID(class_name), extra, NULL);
 
 
