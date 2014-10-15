@@ -10,29 +10,29 @@
 	<string>CFObjectClass</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>88FEE9DF-B304-44C7-8522-4517FE8F94BC</key>
+		<key>CC8EE4B6C5E29A75FB6362997F7F51BA603EEAC4</key>
 		<string>ssh://github.com/samdmarshall/CFObjectRef.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CFObjectClass/CFObjectClass.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>88FEE9DF-B304-44C7-8522-4517FE8F94BC</key>
+		<key>CC8EE4B6C5E29A75FB6362997F7F51BA603EEAC4</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/samdmarshall/CFObjectRef.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>88FEE9DF-B304-44C7-8522-4517FE8F94BC</string>
+	<string>CC8EE4B6C5E29A75FB6362997F7F51BA603EEAC4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>88FEE9DF-B304-44C7-8522-4517FE8F94BC</string>
+			<string>CC8EE4B6C5E29A75FB6362997F7F51BA603EEAC4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CFObjectClass</string>
 		</dict>

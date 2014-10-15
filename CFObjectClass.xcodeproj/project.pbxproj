@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2200BB0019EECC2F0043C9F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200BAFF19EECC2F0043C9F6 /* main.m */; };
+		2200BB0319EECC2F0043C9F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200BB0219EECC2F0043C9F6 /* AppDelegate.m */; };
+		2200BB0519EECC2F0043C9F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2200BB0419EECC2F0043C9F6 /* Images.xcassets */; };
+		2200BB0819EECC2F0043C9F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2200BB0619EECC2F0043C9F6 /* MainMenu.xib */; };
+		2200BB1419EECC2F0043C9F6 /* CFObjectBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200BB1319EECC2F0043C9F6 /* CFObjectBuilderTests.m */; };
 		229E47D819C3884800367E0D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229E47D719C3884800367E0D /* CoreFoundation.framework */; };
 		229E47DB19C3884800367E0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 229E47DA19C3884800367E0D /* main.c */; };
 		229E47DD19C3884800367E0D /* TestingCFObjects.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 229E47DC19C3884800367E0D /* TestingCFObjects.1 */; };
 		229E47E519C3886200367E0D /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = 229E47E319C3886200367E0D /* test.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2200BB0E19EECC2F0043C9F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 229E47CA19C3882500367E0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2200BAFA19EECC2F0043C9F6;
+			remoteInfo = CFObjectBuilder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		229E47D219C3884800367E0D /* CopyFiles */ = {
@@ -27,6 +42,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2200BAFB19EECC2F0043C9F6 /* CFObjectBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFObjectBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2200BAFE19EECC2F0043C9F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2200BAFF19EECC2F0043C9F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2200BB0119EECC2F0043C9F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2200BB0219EECC2F0043C9F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2200BB0419EECC2F0043C9F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2200BB0719EECC2F0043C9F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2200BB0D19EECC2F0043C9F6 /* CFObjectBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFObjectBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2200BB1219EECC2F0043C9F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2200BB1319EECC2F0043C9F6 /* CFObjectBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFObjectBuilderTests.m; sourceTree = "<group>"; };
 		229E47D419C3884800367E0D /* TestingCFObjects */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestingCFObjects; sourceTree = BUILT_PRODUCTS_DIR; };
 		229E47D719C3884800367E0D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		229E47DA19C3884800367E0D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -38,6 +63,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2200BAF819EECC2F0043C9F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2200BB0A19EECC2F0043C9F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		229E47D119C3884800367E0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,11 +88,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2200BAFC19EECC2F0043C9F6 /* CFObjectBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				2200BB0119EECC2F0043C9F6 /* AppDelegate.h */,
+				2200BB0219EECC2F0043C9F6 /* AppDelegate.m */,
+				2200BB0419EECC2F0043C9F6 /* Images.xcassets */,
+				2200BB0619EECC2F0043C9F6 /* MainMenu.xib */,
+				2200BAFD19EECC2F0043C9F6 /* Supporting Files */,
+			);
+			path = CFObjectBuilder;
+			sourceTree = "<group>";
+		};
+		2200BAFD19EECC2F0043C9F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2200BAFE19EECC2F0043C9F6 /* Info.plist */,
+				2200BAFF19EECC2F0043C9F6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2200BB1019EECC2F0043C9F6 /* CFObjectBuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				2200BB1319EECC2F0043C9F6 /* CFObjectBuilderTests.m */,
+				2200BB1119EECC2F0043C9F6 /* Supporting Files */,
+			);
+			path = CFObjectBuilderTests;
+			sourceTree = "<group>";
+		};
+		2200BB1119EECC2F0043C9F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2200BB1219EECC2F0043C9F6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		229E47C919C3882500367E0D = {
 			isa = PBXGroup;
 			children = (
 				229E47E819C3926000367E0D /* CFObjectRef */,
 				229E47D919C3884800367E0D /* TestingCFObjects */,
+				2200BAFC19EECC2F0043C9F6 /* CFObjectBuilder */,
+				2200BB1019EECC2F0043C9F6 /* CFObjectBuilderTests */,
 				229E47D619C3884800367E0D /* Frameworks */,
 				229E47D519C3884800367E0D /* Products */,
 			);
@@ -63,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				229E47D419C3884800367E0D /* TestingCFObjects */,
+				2200BAFB19EECC2F0043C9F6 /* CFObjectBuilder.app */,
+				2200BB0D19EECC2F0043C9F6 /* CFObjectBuilderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +179,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2200BAFA19EECC2F0043C9F6 /* CFObjectBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2200BB1919EECC2F0043C9F6 /* Build configuration list for PBXNativeTarget "CFObjectBuilder" */;
+			buildPhases = (
+				2200BAF719EECC2F0043C9F6 /* Sources */,
+				2200BAF819EECC2F0043C9F6 /* Frameworks */,
+				2200BAF919EECC2F0043C9F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CFObjectBuilder;
+			productName = CFObjectBuilder;
+			productReference = 2200BAFB19EECC2F0043C9F6 /* CFObjectBuilder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2200BB0C19EECC2F0043C9F6 /* CFObjectBuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2200BB1A19EECC2F0043C9F6 /* Build configuration list for PBXNativeTarget "CFObjectBuilderTests" */;
+			buildPhases = (
+				2200BB0919EECC2F0043C9F6 /* Sources */,
+				2200BB0A19EECC2F0043C9F6 /* Frameworks */,
+				2200BB0B19EECC2F0043C9F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2200BB0F19EECC2F0043C9F6 /* PBXTargetDependency */,
+			);
+			name = CFObjectBuilderTests;
+			productName = CFObjectBuilderTests;
+			productReference = 2200BB0D19EECC2F0043C9F6 /* CFObjectBuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		229E47D319C3884800367E0D /* TestingCFObjects */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 229E47E019C3884800367E0D /* Build configuration list for PBXNativeTarget "TestingCFObjects" */;
@@ -122,6 +238,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					2200BAFA19EECC2F0043C9F6 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					2200BB0C19EECC2F0043C9F6 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 2200BAFA19EECC2F0043C9F6;
+					};
+				};
 			};
 			buildConfigurationList = 229E47CD19C3882500367E0D /* Build configuration list for PBXProject "CFObjectClass" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -129,6 +254,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 229E47C919C3882500367E0D;
 			productRefGroup = 229E47D519C3884800367E0D /* Products */;
@@ -136,11 +262,49 @@
 			projectRoot = "";
 			targets = (
 				229E47D319C3884800367E0D /* TestingCFObjects */,
+				2200BAFA19EECC2F0043C9F6 /* CFObjectBuilder */,
+				2200BB0C19EECC2F0043C9F6 /* CFObjectBuilderTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2200BAF919EECC2F0043C9F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2200BB0519EECC2F0043C9F6 /* Images.xcassets in Resources */,
+				2200BB0819EECC2F0043C9F6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2200BB0B19EECC2F0043C9F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		2200BAF719EECC2F0043C9F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2200BB0319EECC2F0043C9F6 /* AppDelegate.m in Sources */,
+				2200BB0019EECC2F0043C9F6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2200BB0919EECC2F0043C9F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2200BB1419EECC2F0043C9F6 /* CFObjectBuilderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		229E47D019C3884800367E0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,7 +316,206 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2200BB0F19EECC2F0043C9F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2200BAFA19EECC2F0043C9F6 /* CFObjectBuilder */;
+			targetProxy = 2200BB0E19EECC2F0043C9F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2200BB0619EECC2F0043C9F6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2200BB0719EECC2F0043C9F6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		2200BB1519EECC2F0043C9F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CFObjectBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2200BB1619EECC2F0043C9F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CFObjectBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2200BB1719EECC2F0043C9F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CFObjectBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CFObjectBuilder.app/Contents/MacOS/CFObjectBuilder";
+			};
+			name = Debug;
+		};
+		2200BB1819EECC2F0043C9F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CFObjectBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CFObjectBuilder.app/Contents/MacOS/CFObjectBuilder";
+			};
+			name = Release;
+		};
 		229E47CE19C3882500367E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -240,6 +603,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2200BB1919EECC2F0043C9F6 /* Build configuration list for PBXNativeTarget "CFObjectBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2200BB1519EECC2F0043C9F6 /* Debug */,
+				2200BB1619EECC2F0043C9F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2200BB1A19EECC2F0043C9F6 /* Build configuration list for PBXNativeTarget "CFObjectBuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2200BB1719EECC2F0043C9F6 /* Debug */,
+				2200BB1819EECC2F0043C9F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		229E47CD19C3882500367E0D /* Build configuration list for PBXProject "CFObjectClass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -256,6 +635,7 @@
 				229E47DF19C3884800367E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
